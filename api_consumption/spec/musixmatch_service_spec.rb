@@ -2,16 +2,9 @@ require './spec/spec_helper'
 require './musix_match_service'
 
 describe MusixMatchService do
-  before(:each) do
-    @m = MusixMatchService.new
-  end
-
-  it 'exists' do
-    expect(@m).to be_a(MusixMatchService)
-  end
 
   it 'can find a list of music genres' do
-    response = @m.music_genres
+    response = MusixMatchService.music_genres
 
     expect(response).to have_key("message")
     expect(response["message"]).to have_key("body")
@@ -20,7 +13,7 @@ describe MusixMatchService do
   end
 
   it 'can find a list of tracks by an artist search' do
-    response = @m.tracks_from_artist("NEEDTOBREATH")
+    response = MusixMatchService.tracks_from_artist("NEEDTOBREATH")
 
     expect(response).to have_key("message")
     expect(response["message"]).to have_key("body")

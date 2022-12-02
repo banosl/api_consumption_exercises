@@ -1,15 +1,9 @@
 require 'spec_helper'
 
 describe ChuckService do
-  before(:each) do
-    @c = ChuckService.new
-  end
-  it 'exists' do
-    expect(@c).to be_a(ChuckService)
-  end
 
   it 'can find a random Chuck Norris joke' do
-    joke = @c.random
+    joke = ChuckService.random
 
     expect(joke).to have_key("icon_url")
     expect(joke).to have_key("id")
@@ -17,7 +11,7 @@ describe ChuckService do
   end
 
   it 'can find a random joke in a category' do
-    joke = @c.random_in_category('music')
+    joke = ChuckService.random_in_category('music')
 
     expect(joke).to have_key("categories")
     expect(joke).to have_key("icon_url")
@@ -26,7 +20,7 @@ describe ChuckService do
   end
 
   it 'can find a list of all categories' do
-    categories = @c.categories
+    categories = ChuckService.categories
 
     expect(categories).to include("music")
     expect(categories).to include("science")
@@ -36,7 +30,7 @@ describe ChuckService do
   end
 
   it 'can search for a joke' do
-    search_results = @c.search("snakes")
+    search_results = ChuckService.search("snakes")
 
     expect(search_results).to have_key("total")
     expect(search_results).to have_key("result")
