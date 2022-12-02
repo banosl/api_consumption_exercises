@@ -11,6 +11,6 @@ A collection of exercises designed to provide an opportunity to practice skills 
 
 3. Run `bundle`
 
-4. Run `rspec`
+4. Run `bundle exec rspec`
 
-  You should see 5 errors. It is recommended that you focus one file at a time. To run a single file use the following command: `rspec spec/file_name_here`. Use the errors and failures to drive your development.
+  You should see 3 errors. It is recommended that you focus one file at a time. To run a single file use the following command: `bundle exec rspec spec/file_name_here`. Use the errors and failures to drive your development.
