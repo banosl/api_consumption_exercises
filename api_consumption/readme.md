@@ -10,9 +10,8 @@ The documentation below has been broken into three groups, depending on the leve
 
 ## Mild
 
-* AdviceService uses [the Advice Slip JSON API](https://api.adviceslip.com/)
+* AdviceService uses [the Advice Slip JSON API](https://api.adviceslip.com/) - This one has been completed as an example
 * ChuckService uses [chucknorris.io](https://api.chucknorris.io/)
-* TacoService uses [the TacoFancy API](https://github.com/evz/tacofancy-api)
 
 ## Medium
 
@@ -25,3 +24,4 @@ The documentation below has been broken into three groups, depending on the leve
 ###### Helpful Hint:
 
 1. To use `JSON.parse` you will need to `require 'json'` at the top of the file.
+2. To use `Faraday`, you might need to `require 'faraday'` at the top of the file.
