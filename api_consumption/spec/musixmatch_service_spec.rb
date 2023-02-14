@@ -1,5 +1,6 @@
-require './spec/spec_helper'
-require './musix_match_service'
+# require './spec/spec_helper'
+# require './musix_match_service'
+require 'spec_helper'
 
 describe MusixMatchService do
 
