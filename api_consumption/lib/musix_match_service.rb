@@ -12,7 +12,11 @@ class MusixMatchService
 
   def self.music_genres
     response = conn.get('music.genres.get', {'apikey' => ENV["musix_api_key"]})
-    binding.pry
+    parse_json(response)
+  end
+
+  def self.tracks_from_artist(artist)
+    response = conn.get('track.search', {'apikey' => ENV["musix_api_key"]}, {q_artist: artist})
     parse_json(response)
   end
 end
