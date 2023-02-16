@@ -1,4 +1,4 @@
-require './spec/spec_helper'
+require 'spec_helper'
 
 describe MarvelService do
 
@@ -12,13 +12,13 @@ describe MarvelService do
   end
 
   it 'can get a list of creators by last name' do
-    c = MarvelService.creators(last_name: "kirby")
+    c = MarvelService.creators(lastName: "kirby")
 
     expect(c["data"]["results"].first["firstName"]).to eq("Jack")
   end
 
   it 'can get a list of creators by first name' do
-    c = MarvelService.creators(first_name: "brian")
+    c = MarvelService.creators(firstName: "brian")
 
     expect(c["data"]["results"][4]["lastName"]).to eq("Bendis")
   end
